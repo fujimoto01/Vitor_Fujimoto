@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from flask import Flask, render_template_string
 
 app = Flask(__name__)
@@ -52,11 +54,26 @@ HTML = """
 """
 
 
-@app.route("/")
-def index():
+def render_page():
+  with app.app_context():
     return render_template_string(HTML, user=USER)
 
 
+def build_static_site(output_path="index.html"):
+  Path(output_path).write_text(render_page(), encoding="utf-8")
+
+
+@app.route("/")
+def index():
+  return render_page()
+
+
 if __name__ == "__main__":
+  import sys
+
+  if "--build" in sys.argv:
+    build_static_site()
+    print("index.html gerado.")
+  else:
     # Rode: python site.py
     app.run(host="0.0.0.0", port=8000, debug=True)

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitor Fujimoto</title>
+  <style>
+    :root{color-scheme:dark}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#0f172a;color:#e6eef8;margin:0;padding:24px}
+    .card{background:linear-gradient(180deg,#07102a 0%,#0b1530 100%);padding:36px;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,.7);width:min(720px,94vw);border:1px solid rgba(255,255,255,.05)}
+    .header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:16px;object-fit:cover;border:2px solid rgba(255,255,255,.06);flex:none}
+    h1{margin:0;font-size:1.6rem;line-height:1.2}
+    h1 small{opacity:.8;font-weight:500}
+    p.lead{margin:8px 0 18px;color:#9fb0d9;line-height:1.6}
+    .links{display:flex;flex-wrap:wrap;gap:10px}
+    .link{background:rgba(255,255,255,.03);padding:10px 14px;border-radius:10px;color:#dbeafe;text-decoration:none;border:1px solid rgba(255,255,255,.04);transition:transform .15s ease, background .15s ease}
+    .link:hover{transform:translateY(-1px);background:rgba(255,255,255,.06)}
+    footer{margin-top:18px;color:#7f93b4;font-size:.9rem}
+    @media (max-width:520px){
+      .card{padding:24px}
+      .header{flex-direction:column;align-items:flex-start}
+      .avatar{width:84px;height:84px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="header">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/181305668?s=400&u=23cb75ff18217d9bba1ec01999e76f5a7a572241&v=4" alt="avatar de Vitor Fujimoto">
+      <div>
+        <h1>Vitor Fujimoto <small>Statistic undergraduated</small></h1>
+        <p class="lead">UFPR student, passionate about data science and machine learning. Always eager to learn and share knowledge.</p>
+        <div class="links">
+          <a class="link" href="https://github.com/fujimoto01" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
